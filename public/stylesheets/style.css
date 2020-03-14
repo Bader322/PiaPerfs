@@ -1,27 +1,19 @@
-.jumbotron {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.mid{
+  background-color: #FFCD69;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
   margin-bottom: 0;
-  background-color: #fff;
-}
-@media (min-width: 768px) {
-  .jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
+  outline: 3px solid black;
 }
 
-.jumbotron p:last-child {
+
+
+.mid p:last-child {
   margin-bottom: 0;
+  
 }
 
-.jumbotron h1 {
-  font-weight: 300;
-}
 
-.jumbotron .container {
-  max-width: 40rem;
-}
 
 footer {
   padding-top: 3rem;
@@ -48,9 +40,10 @@ footer p {
 }
 
 
-.navbar{
+header{
   
   /* outline: 10px solid black; */
   background-color: rgb(96, 120, 177);
   
 }
+
