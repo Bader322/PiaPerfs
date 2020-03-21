@@ -1,0 +1,38 @@
+// **************// insert into collection
+// db.videos.insertOne({ "name": "Pirates", "image": "null" });
+
+
+// **************// insert many to collection at once **************
+// db.videos.insertMany([
+    // {"name": "Dedication to mother"},
+    // {"name": "Marriage de more"}
+// ])
+
+// **************// Delete one document from a collection ************** // Note how you don't use quotes for the property here
+// db.videos.deleteOne({_id:  ObjectId("5e7516f0ac62f55a66b06d2d")})
+
+
+
+// **************** update somethin **************** /
+//db.videos.updateOne({ "name": "k45"}, { $set: { "name": "japanese piano"}})
+//  db.videos.updateOne({ "_id": ObjectId("5e740044bc781158cea80290")}, { $set: { "played": "2017"}})
+
+
+
+// **************** query all ****************
+//db.videos.find();
+
+// **************** query somethin **************** /
+// db.videos.find({"name": "Game of Thrones", "_id": ObjectId("5e740044bc781158cea80290")})
+
+
+
+
+
+
+// **************** drop a collection ****************
+// db.stuff.drop();
+
+//  **************** drop db ****************
+// db.dropDatabase()
+
