@@ -8,15 +8,11 @@ var app = require('../app');
 var debug = require('debug')('blogproj:server');
 var http = require('http');
 
-// load bootstrap 
-//  import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort('3000');
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**

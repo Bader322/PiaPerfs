@@ -1,76 +1,8 @@
-.container{
-  position: relative;
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.text-block > a {
- font-family: Arial, Helvetica, sans-serif;
- 
-}
-
-.mid{
-  margin-top: 35px;
-  width: 100%;
-}
-
-
-#note-i{
-  margin-right: 5px;
-  
-}
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
-}
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-
-
-
-.fa-facebook-f{
-  
-  /* outline: 10px solid black; */
-  width: 20px;
-  height: 20px; 
-  
-}
-
-.list-unstyled > li {
-  display: inline-block;
-  margin-left: 15px;
-  margin-right: 20px;
-  padding-top: 35px;
-  
-}
-
-.navbar-toggler-icon{
-  margin-top: 3px;
-  margin-bottom:6px;
-}
-
-
-
-#fs{
-  background-repeat: no-repeat;
-  width: 100%;
-}
-#ss{
-  display: none;
-}
-.carousel-item > img {
-  /* border-image-width: auto; */
-  height: 40rem;
-  
-
+a {
+  color: #00B7FF;
 }
