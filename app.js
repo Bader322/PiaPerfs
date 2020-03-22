@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes to modules
+// Routes to controllers
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/posts',postsController);

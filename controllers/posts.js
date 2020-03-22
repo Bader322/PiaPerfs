@@ -8,6 +8,12 @@ const dbName = 'posts';
 
 // route to posts controller
 router.get('/' ,(req, res, next) => {
+  // middleware
+  
+  
+
+
+  //end of mid ware
   res.render('posts');
       // Use connect method to connect to the server
       MongoClient.connect(url, function(err, client) {
@@ -15,8 +21,10 @@ router.get('/' ,(req, res, next) => {
         const db = client.db(dbName);
         const collection = db.collection('videos');
         collection.find().toArray((error, documents) => {
-          console.log(documents);
+          //console.log(documents);
         });
+
+        
 
         // end mongo connection
         client.close();
