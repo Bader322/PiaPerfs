@@ -11,9 +11,6 @@ const dbName = 'posts';
 router.get('/' ,function(req, res, next)  {
   
   
-  
-  
-  
       // Use connect method to connect to the server
       MongoClient.connect(url, function(err, client) {
         console.log("Connected successfully to server");

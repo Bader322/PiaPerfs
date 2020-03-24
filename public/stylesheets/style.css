@@ -1,6 +1,7 @@
 .container{
   position: relative;
   
+ 
 }
 
 .text-block{
@@ -121,6 +122,10 @@ footer p {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
-  outline: green 1px solid;
-  color: aqua;
+  display: inline-flex;
 } 
+.col-md-1{
+ 
+ 
+ 
+}
