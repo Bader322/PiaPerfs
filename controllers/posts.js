@@ -1,15 +1,19 @@
 const express = require("express");
 const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017/pianoref';
+const url = 'mongodb://localhost:27017';
 const router = express.Router();
-const post = require('../Models/Post')
+const post = require('../models/Post')
 // Database Name
 const dbName = 'posts';
 
 
 // route to posts controller
-router.get('/' ,(req, res, next) => {
-  res.render('posts');
+router.get('/' ,function(req, res, next)  {
+  
+  
+  
+  
+  
       // Use connect method to connect to the server
       MongoClient.connect(url, function(err, client) {
         console.log("Connected successfully to server");
@@ -17,10 +21,14 @@ router.get('/' ,(req, res, next) => {
         const collection = db.collection('videos');
         collection.find().toArray((error, documents) => {
         console.log(documents);
-        });
-
         // end mongo connection
         client.close();
+
+
+        res.render('posts',{'documents': documents});
+        });
+
+        
       });
 
 
