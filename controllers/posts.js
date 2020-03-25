@@ -1,42 +1,44 @@
 const express = require("express");
-const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017/pianoref';
+const mongoose = require('mongoose');
+const url = 'mongodb://localhost:27017/piano';
 const router = express.Router();
-const post = require('../Models/Post')
-
+const Post = require('../models/post.model')
 // Database Name
-const dbName = 'posts';
 
-const sView = 'posts';
 
 // route to posts controller
-router.get(
-    '/',
-    (req, res, next) =>
-    {
-        res.render(sView);
+router.get('/' ,async function(req, res, next)  {
+      //open connection to posts db
+  mongoose.connect(url, { useNewUrlParser: true });
+  var db = mongoose.connection;
+  db.on('error', console.error.bind(console,'connection error:'))
+  db.once('open',function(){})
 
-        // Use connect method to connect to the server
-        MongoClient.connect(
-            url,
-            function(err, client)
-            {
-                console.log("Connected successfully to server");
-                const db = client.db(dbName);
-                const collection = db.collection('videos');
+  var postPass = await Post.find({});
+  console.log("***********" + postPass)
+  res.render('posts',{'posts': postPass})
+     
+  
+});
 
-                collection.find().toArray(
-                    (error, documents) =>
-                    {
-                        console.log(documents);
-                    }
-                );
+// show post in full view, 
+router.get('/:id',(req,res)  => {
+    const selectedId = req.params.id;
+    
+  
+  res.render('showpost',{'id':selectedId})
+})
 
-                // end mongo connection
-                client.close();
-            }
-        );
-    }
-);
+// edit post
+
+
+// update post
+
+
+// delete post
+
+
+
+
 
 module.exports = router;
