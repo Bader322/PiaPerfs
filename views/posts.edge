@@ -5,19 +5,18 @@
   <link rel='stylesheet' href='stylesheets/posts.css'/>
 </head>
 
-<div class="mid">
+<div class="album">
     <div class="container">
       <div class="row">
-       
-        @each(post in posts)
+        @each(postPas in postPass)
           <div class="col-md-1"></div>
           <div class="col-md-10">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ post.title }}</text></svg>
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ postPas.name }}</text></svg>
               <div class="card-body">
-              <p class="card-text">{{post._id}}</p>
+              <p class="card-text">{{postPas._id}}</p>
                 <div class="d-flex justify-content-between align-items-center">
-                  <small class="text-muted">{{post.created_at}}</small>
+                  <small class="text-muted">9 mins</small>
                 </div>
               </div>
             </div>

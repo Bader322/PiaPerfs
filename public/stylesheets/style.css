@@ -1,5 +1,7 @@
 .container{
   position: relative;
+  
+ 
 }
 
 .text-block{
@@ -122,3 +124,8 @@ footer p {
 .carousel-control-next-icon{
   display: inline-flex;
 } 
+.col-md-1{
+ 
+ 
+ 
+}

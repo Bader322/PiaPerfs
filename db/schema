@@ -10,7 +10,6 @@
 
 // **************// Delete one document from a collection ************** // Note how you don't use quotes for the property here
 // db.videos.deleteOne({_id:  ObjectId("5e7516f0ac62f55a66b06d2d")})
-    db.videos.deleteMany()
 
 
 
