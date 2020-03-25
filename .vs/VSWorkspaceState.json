@@ -5,9 +5,8 @@
     "\\controllers",
     "\\db",
     "\\public",
-    "\\routes",
-    "\\views",
-    "\\views\\layouts"
+    "\\views"
   ],
+  "SelectedNode": "\\controllers\\posts.js",
   "PreviewInSolutionExplorer": false
 }
