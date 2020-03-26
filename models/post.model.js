@@ -7,5 +7,6 @@ const PostSchema = new mongoose.Schema({
     updated_at: Date
 
 });
- 
+
+
 module.exports = mongoose.model('posts', PostSchema);
