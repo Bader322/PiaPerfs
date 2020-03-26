@@ -8,4 +8,4 @@ const PostSchema = new mongoose.Schema({
 
 });
  
-module.exports = mongoose.model('videos', PostSchema);
+module.exports = mongoose.model('posts', PostSchema);
