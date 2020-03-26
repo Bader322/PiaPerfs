@@ -12,7 +12,9 @@
           <div class="col-md-1"></div>
           <div class="col-md-10">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ post.title }}</text></svg>
+            <a href="posts/{{post._id}}">
+                <svg class="bd-placeholder-img" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ post.title }}</text></svg>
+              </a>
               <div class="card-body">
               <p class="card-text">{{post._id}}</p>
                 <div class="d-flex justify-content-between align-items-center">
