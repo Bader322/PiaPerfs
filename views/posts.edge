@@ -11,11 +11,14 @@
         @each(post in posts)
           <div class="col-md-5">
             <div class="card mb-4 shadow-sm">
-            <a href="posts/{{post._id}}">
+            <a href="show/{{post._id}}">
                 <svg class="bd-placeholder-img" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ post.title }}</text></svg>
               </a>
               <div class="card-body">
-              <p class="card-text">{{post._id}}</p>
+              <p class="card-text">{{post._id}} </p>
+                <span><a href="show/{{post._id}}"><button class="btn btn-light">View</button></a></span>
+                <span><a href="edit/{{post._id}}"><button class="btn btn-light">Edit</button></a></span>
+                <span><a href="delete/{{post._id}}"><button type="button" class="btn btn-light">Delete</button></span>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">{{post.created_at}}</small>
                 </div>

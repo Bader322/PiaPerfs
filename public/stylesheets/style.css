@@ -1,9 +1,6 @@
 .container{
   position: relative;
-  
- 
 }
-
 .text-block{
   
   position: absolute;
@@ -126,6 +123,11 @@ footer p {
 } 
 .col-md-1{
  
+ margin: 25px;
  
- 
+}
+
+.btn-light{
+  float: right;
+  margin: 3px
 }

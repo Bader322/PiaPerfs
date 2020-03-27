@@ -7,4 +7,11 @@ echo $message
 read commsg
 echo "committing message"
 git commit -m "$commsg"
-git push
+echo "Push changes? (Y/y-- anything else for no)"
+read ansr
+if [ $ansr == 'y' -o $ansr == 'Y' ] ; then
+    echo "Pushing!!!!"
+    git push
+else
+    echo "Only committed "
+fi
