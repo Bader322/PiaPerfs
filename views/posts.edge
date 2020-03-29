@@ -5,6 +5,7 @@
   <link rel='stylesheet' href='stylesheets/posts.css'/>
 </head>
 
+
 <div class="album">
     <div class="container">
       <div class="row">
@@ -16,8 +17,8 @@
               </a>
               <div class="card-body">
               <p class="card-text">{{post._id}} </p>
-                <span><a href="show/{{post._id}}"><button class="btn btn-light">View</button></a></span>
-                <span><a href="edit/{{post._id}}"><button class="btn btn-light">Edit</button></a></span>
+              <span><a href="posts/{{post._id}}"><button class="btn btn-light">View</button></a></span>
+                <span><a href="posts/edit/{{post._id}}"><button class="btn btn-light">Edit</button></a></span>
                 <span><a href="delete/{{post._id}}"><button type="button" class="btn btn-light">Delete</button></span>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">{{post.created_at}}</small>

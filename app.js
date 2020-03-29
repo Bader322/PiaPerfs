@@ -10,7 +10,7 @@ const postsRouter = require('./controllers/posts');
 const app = express();
  
 // view engine setup
-app.set('style',path.join(__dirname, 'public/stylesheets'));
+
 app.set('views', path.join(__dirname, 'views'));
 const { config, engine } = require('express-edge');
 app.use(engine);
@@ -25,8 +25,7 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/posts',postsRouter);
-app.use('/show/:id',postsRouter);
-app.use('/edit/:id',postsRouter);
+app.use('/edit',postsRouter);
 
 
 
