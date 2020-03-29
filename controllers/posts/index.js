@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017/piano';
 const router = express.Router();
-const Post = require('../models/post.model.js')
-
+const Post = require('../../models/post.model.js')
+const mongourl = 'mongodb://bader322:<password>@cluster0-shard-00-00-hgjti.mongodb.net:27017,cluster0-shard-00-01-hgjti.mongodb.net:27017,cluster0-shard-00-02-hgjti.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority'
 
 
 
@@ -34,14 +34,7 @@ router.get('/:id',(req,res,next)  => {
 
 
 
-// edit post
-router.get('/edit/:id',(req,res,next)  => {
-  // find other elements of this id, then return them to view to use
-  
 
-  const selectedId = req.params.id;
-  res.render('edit',{'id':selectedId})
-});
 
 // update post
 

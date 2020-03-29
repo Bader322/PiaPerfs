@@ -6,7 +6,8 @@ const logger = require('morgan');
 const router = express.Router();
 const indexRouter = require('./controllers/index');
 const usersRouter = require('./controllers/users');
-const postsRouter = require('./controllers/posts');
+const postsRouter = require('./controllers/posts/index');
+const editRouter = require('./controllers/posts/edit');
 const app = express();
  
 // view engine setup
@@ -24,8 +25,9 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 app.use('/posts',postsRouter);
-app.use('/edit',postsRouter);
+app.use('/posts/edit',editRouter);
 
 
 
