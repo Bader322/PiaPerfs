@@ -1,14 +1,32 @@
-.container{
-  position: relative;
+
+.addbtns > a {
+
+  color: gray;
+  float: right;
+  margin-top: 20px;
+  height: 3px;
 }
+.addbtns:hover > a {
+
+  color: black;
+  float: right;
+}
+.container{
+  display: flex;
+
+}
+
+
+
+
 .text-block{
   
   position: absolute;
   top: 86.5%;
   /* right: 33px; */
   right: 1%;
-  background-color: rgba(12, 26, 20, 0.829); 
-  
+  background-color: rgba(12, 26, 20, 0.247); 
+
   padding-left: 20px;
   padding-right: 20px; 
   padding-top: 20px;
@@ -17,20 +35,17 @@
   border-radius: 8%;
 }
 .text-block:hover{
-  background-color: rgba(25, 48, 38, 0.829); 
-  text-decoration: none;
+  background-color: rgba(12, 26, 20, 0.829); 
+
 }
 .carousel-item > a {
- font-family: Arial;
- font-size: 1.5rem;
+ font-family: 'Courier New', Courier, monospace;
+ font-size: 1.7rem;
  color:#bda050;
- text-decoration: none;
- 
- 
 }
 .carousel-item > a:hover {
-  font-family: Arial;
-  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.7rem;
   color:#bda050;
   text-decoration: none;
  }
@@ -39,6 +54,7 @@
 .mid{
   margin-top: 35px;
   width: 100%;
+  outline: black 5px solid;
 }
 
 
@@ -121,18 +137,19 @@ footer p {
 .carousel-control-next-icon{
   display: inline-flex;
 } 
-.col-md-1{
- 
- margin: 25px;
- 
-}
+
 
 .btn-light{
   float: right;
   margin: 3px
 }
 form{
- position: relative;
-top: 30px;
   
+ 
+  flex: 50% 60%;
+  height: 100px;
+  margin-bottom: 2%; 
+
 }
+
+

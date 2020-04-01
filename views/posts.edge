@@ -8,26 +8,27 @@
 
 <div class="album">
     <div class="container">
+      <div  ><span class="addbtns"><a href="create"><i class="fas fa-plus fa-2x" ></i></a></span></div>
       <div class="row">
         @each(post in posts)
-       
+        {{--  <div class="col-md-1"></div>  --}}
           <div class="col-md-5">
             <div class="card mb-4 shadow-sm">
-            <a href="show/{{post._id}}">
+            <a href="posts/{{post._id}}">
                 <svg class="bd-placeholder-img" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ post.title }}</text></svg>
               </a>
               <div class="card-body">
-              <p class="card-text">{{post._id}} </p>
+              <p class="card-text">{{post._id}}</p>
               <span><a href="posts/{{post._id}}"><button class="btn btn-light">View</button></a></span>
                 <span><a href="posts/edit/{{post._id}}"><button class="btn btn-light">Edit</button></a></span>
-                <span><a href="delete/{{post._id}}"><button type="button" class="btn btn-light">Delete</button></span>
+                <span><a href="delete/{{post._id}}"><button type="button" class="btn btn-light">Delete</button></a></span>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">{{post.created_at}}</small>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-1"></div>
+
         @endeach
         
         

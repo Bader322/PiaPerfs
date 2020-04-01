@@ -1,5 +1,11 @@
-.album {
-    background-color: rgb(245, 245, 245);
-    fill-opacity: initial;
-    margin-top: 15px;
+.row {
+    /* background-color: rgb(245, 245, 245); */
+ 
+    margin-top: 35px;
 }
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
