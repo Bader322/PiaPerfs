@@ -1,23 +1,32 @@
+//Modules
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+// const bodyparser = require('body-parser');
+
+
 const router = express.Router();
+const app = express();
+// app.use(bodyparser.urlencoded({ extended: true }));
+
+
+// Controllers
 const indexRouter = require('./controllers/index');
 const usersRouter = require('./controllers/users');
 const postsRouter = require('./controllers/posts/index');
 const editRouter = require('./controllers/posts/edit');
-const CreateRouter  = require('./controllers/posts/create')
-const app = express();
+const CreateRouter  = require('./controllers/posts/create');
+
+
 
 // view engine setup
-
 app.set('views', path.join(__dirname, 'views'));
 const { config, engine } = require('express-edge');
 app.use(engine);
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

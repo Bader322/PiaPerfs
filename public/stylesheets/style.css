@@ -11,13 +11,6 @@
   color: black;
   float: right;
 }
-.container{
-  display: flex;
-
-}
-
-
-
 
 .text-block{
   
@@ -54,7 +47,6 @@
 .mid{
   margin-top: 35px;
   width: 100%;
-  outline: black 5px solid;
 }
 
 

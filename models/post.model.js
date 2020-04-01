@@ -8,4 +8,6 @@ const PostSchema = new mongoose.Schema({
     image: String
 
 });
-module.exports = mongoose.model('PostModel', PostSchema);
+// name of collection created or to be created in quotes
+// then the schema itself made
+module.exports = mongoose.model('video', PostSchema);

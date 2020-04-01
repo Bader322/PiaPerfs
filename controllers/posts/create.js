@@ -2,19 +2,36 @@ const express = require("express");
 const mongoose = require('mongoose');
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017/piano';
+const bodyparser = require('body-parser');
+const app = express();
+app.use(bodyparser.urlencoded({ extended: true }));
 const router = express.Router();
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 const Post = require('../../models/post.model.js')
-const mongourl = 'mongodb://bader322:' +  process.env.MONGO_ATLAS_PW + '@cluster0-shard-00-00-hgjti.mongodb.net:27017,\
-cluster0-shard-00-01-hgjti.mongodb.net:27017,cluster0-shard-00-02-hgjti.mongodb.net:27017/\
-test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority';
 
 
 // get a form to fill by user
 router.get('/', (req, res) => {
-    //internal scope of this function
+   
     res.render('create');
-})
+});
 
+
+
+
+router.post('/', (req,res) => {
+    console.log("Printing post field: " + req.body.title)
+    console.log("Printing post field: " + req.body.description)
+    const newPost = new Post({
+        title: req.body.title,
+        description: req.body.description
+    })
+    newPost.save()
+    res.redirect('/')
+
+
+
+})
 
 // //Create post method
 // router.post('/superheroes', (req, res) => {
