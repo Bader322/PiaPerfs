@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyparser.urlencoded({ extended: true }));
 const router = express.Router();
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
-const Post = require('../../models/post.model.js')
+const Post = require('../../models/post.js')
 
 
 // get a form to fill by user
@@ -24,7 +24,9 @@ router.post('/', (req,res) => {
     console.log("Printing post field: " + req.body.description)
     const newPost = new Post({
         title: req.body.title,
-        description: req.body.description
+        description: req.body.description,
+        created_at: Date(),
+        updated_at: Date()
     })
     newPost.save()
     res.redirect('/')
@@ -32,18 +34,4 @@ router.post('/', (req,res) => {
 
 
 })
-
-// //Create post method
-// router.post('/superheroes', (req, res) => {
-//     //internal scope of this function
-//     const newSuperHero = {
-//         name: req.body.superhero.toUpperCase(),
-//         image: req.file.filename
-//     }
-//     const superheroe = new Superheroe(newSuperHero);
-//     superheroe.save()
-//     res.redirect('/');
-// });
-
-
 module.exports = router;

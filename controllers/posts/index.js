@@ -2,7 +2,7 @@ const express = require("express");
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017/piano';
 const router = express.Router();
-const Post = require('../../models/post.model.js')
+const Post = require('../../models/post.js')
 
 
 
