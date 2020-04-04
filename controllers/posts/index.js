@@ -18,6 +18,7 @@ router.get('/' , (req, res, next) => {
     let colletion = db.collection('videos')
     colletion.find({}).toArray((error,documents) => {
       var post_all = documents
+      console.log("docs: " + post_all.title)
       client.close();
       res.render('posts',{'posts' : post_all})
     })

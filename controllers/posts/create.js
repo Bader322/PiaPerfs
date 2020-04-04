@@ -29,7 +29,7 @@ router.post('/', (req,res) => {
         updated_at: Date()
     })
     newPost.save()
-    res.redirect('/')
+    res.redirect('/posts')
 
 
 

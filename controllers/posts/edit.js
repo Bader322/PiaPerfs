@@ -1,10 +1,8 @@
 const express = require("express");
 const mongoose = require('mongoose');
-const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017/piano';
 const router = express.Router();
 const Post = require('../../models/post.js')
-//const ObjectId = require('mongodb').ObjectID;
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection
     .on("error",error => console.log("Error: ", error))

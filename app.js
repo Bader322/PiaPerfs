@@ -4,12 +4,10 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-// const bodyparser = require('body-parser');
 
 
 const router = express.Router();
 const app = express();
-// app.use(bodyparser.urlencoded({ extended: true }));
 
 
 // Controllers
@@ -18,7 +16,8 @@ const usersRouter = require('./controllers/users');
 const postsRouter = require('./controllers/posts/index');
 const editRouter = require('./controllers/posts/edit');
 const CreateRouter  = require('./controllers/posts/create');
-
+const DeleteRouter  = require('./controllers/posts/delete');
+const UpdateRouter  = require('./controllers/posts/update');
 
 
 // view engine setup
@@ -35,10 +34,11 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
 app.use('/posts',postsRouter);
 app.use('/posts/edit',editRouter);
 app.use('/create', CreateRouter);
+app.get('/delete/:id', DeleteRouter);
+app.post('/update/:id', UpdateRouter);
 
 
 // catch 404 and forward to error handler

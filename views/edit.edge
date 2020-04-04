@@ -5,17 +5,17 @@
 <div class="container">
   <div class="row">
     <div class="col-md-7">
-      <form action="/update" method="POST">
+    <form action="/update/{{id}}" method="POST">
         <div class="form-group row">
           <label for="title" class="col-sm-2 col-form-label">Title</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" id="inputtitle" placeholder="{{title}}">
+            <input type="text" class="form-control" id="inputtitle" placeholder="{{title}}" name="title">
           </div>
         </div>
         <div class="form-group row">
           <label for="description" class="col-sm-2 col-form-label">Description</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" id="inputdescription" placeholder="{{description}}">
+            <input type="text" class="form-control" id="inputdescription" placeholder="{{description}}" name="description">
           </div>
         </div>
         <div class="form-group row">
