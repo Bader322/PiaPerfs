@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require('mongoose');
 const url = 'mongodb://localhost:27017/piano';
 const router = express.Router();
-const Post = require('../../models/post.js')
+const Post = require('../../models/Post.js')
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection
     .on("error",error => console.log("Error: ", error))

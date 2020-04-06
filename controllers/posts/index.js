@@ -2,7 +2,7 @@ const express = require("express");
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017/piano';
 const router = express.Router();
-const Post = require('../../models/post.js')
+const Post = require('../../models/Post.js')
 
 
 
@@ -26,10 +26,11 @@ router.get('/' , (req, res, next) => {
   }); 
 });
 // show post in full view, 
-router.get('/:id',(req,res,next)  => {
+router.get('/:id',async(req,res,next)  => {
   console.log("i'm here at show id: ");
   const selectedId = req.params.id;
-  res.render('show',{'id':selectedId})
+  const document = await Post.findById(selectedId).exec();
+  res.render('show',{'vid': document.link, 'description': document.description, 'title' :document.title})
   
 })
 

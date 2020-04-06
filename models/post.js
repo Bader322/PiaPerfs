@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
- 
+
 const PostSchema = new mongoose.Schema({
     
     title: String,
     description: String,
+    image: String,
+    link: String,
     created_at: Date,
-    updated_at: Date,
-    image: String
+    updated_at: Date
+    
 
 });
 // name of collection created or to be created in quotes

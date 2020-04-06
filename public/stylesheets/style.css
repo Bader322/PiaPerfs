@@ -11,24 +11,44 @@
   color: black;
   float: right;
 }
+.bio > p {
+  color: rgb(124, 129, 123);
 
+}
+.bio > h4{
+  opacity: 100%;
+  color: #89817B
+  }
+.bio{
+  position: absolute;
+  top: 9%;
+  /* right: 33px; */
+  left:10%;
+  right: 50%;
+  background-color: rgba(10, 10, 10, 0.9);
+  padding-left: 20px;
+  padding-right: 20px; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 8%;
+}
 .text-block{
   
   position: absolute;
   top: 86.5%;
   /* right: 33px; */
   right: 1%;
-  background-color: rgba(12, 26, 20, 0.247); 
+  background-color: rgba(10, 10, 10, 0.9);
 
   padding-left: 20px;
   padding-right: 20px; 
   padding-top: 20px;
   padding-bottom: 20px;
-  opacity: 95%;
+
   border-radius: 8%;
 }
 .text-block:hover{
-  background-color: rgba(12, 26, 20, 0.829); 
+  background-color: rgba(37, 33, 33, 0.9);
 
 }
 .carousel-item > a {
@@ -66,6 +86,9 @@ footer p {
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
+  background-image: url('../images/Mnote.jpg');
+  background-repeat: no-repeat;
+  background-size: 420px 225px;
 }
 
 
@@ -132,10 +155,17 @@ footer p {
   margin: 3px
 }
 form{
-  
- 
   flex: 50% 60%;
   height: 100px;
   margin-bottom: 2%; 
-  margin-top: 35px; 
+  margin-top: 35px;
+}
+h4 > a{
+  float: right;
+  color: black;
+}
+h4 > a:hover {
+  text-decoration: none;
+  color: gray;
+
 }

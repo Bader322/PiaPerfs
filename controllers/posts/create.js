@@ -6,8 +6,10 @@ const bodyparser = require('body-parser');
 const app = express();
 app.use(bodyparser.urlencoded({ extended: true }));
 const router = express.Router();
+const moment = require('moment')
+const date = moment().format("Do/MMMM/YY")
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
-const Post = require('../../models/post.js')
+const Post = require('../../models/Post.js')
 
 
 // get a form to fill by user
@@ -25,6 +27,7 @@ router.post('/', (req,res) => {
     const newPost = new Post({
         title: req.body.title,
         description: req.body.description,
+        link: req.body.link,
         created_at: Date(),
         updated_at: Date()
     })
